@@ -1,0 +1,123 @@
+.layout {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.sideBar {
+  padding: 10px;
+  border-radius: 7px;
+  width: 10%;
+  -webkit-box-shadow: -1px 0px 14px 0px rgba(67, 135, 135, 0.19);
+  -moz-box-shadow: -1px 0px 14px 0px rgba(67, 135, 135, 0.19);
+  box-shadow: -1px 0px 14px 0px rgba(67, 135, 135, 0.19);
+
+  & div {
+    border-radius: 7px;
+    background-color: rgb(124, 187, 212);
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  & span {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.content {
+  padding: 10px;
+  border-radius: 7px;
+  -webkit-box-shadow: -1px 0px 14px 0px rgba(67, 135, 135, 0.19);
+  -moz-box-shadow: -1px 0px 14px 0px rgba(67, 135, 135, 0.19);
+  box-shadow: -1px 0px 14px 0px rgba(67, 135, 135, 0.19);
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.alphabet {
+  display: flex;
+  gap: 15px;
+  padding-left: 65px;
+
+  & > div {
+    padding: 5px 10px;
+    background-color: rgb(124, 187, 212);
+    padding: 5px 10px;
+    border-radius: 7px;
+    text-align: center;
+  }
+
+  & span {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.tongueTwisters {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+
+  & > div {
+    padding: 5px 10px;
+    background-color: rgb(124, 187, 212);
+    padding: 5px 10px;
+    border-radius: 7px;
+  }
+
+  & span {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.count {
+  width: 35px;
+}
+
+.item {
+  width: 100%;
+}
+
+.controlPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 7px;
+  width: 20%;
+  -webkit-box-shadow: -1px 0px 14px 0px rgba(67, 135, 135, 0.19);
+  -moz-box-shadow: -1px 0px 14px 0px rgba(67, 135, 135, 0.19);
+  box-shadow: -1px 0px 14px 0px rgba(67, 135, 135, 0.19);
+
+  & > div {
+    display: flex;
+    gap: 15px;
+
+    & > div:first-child {
+      min-width: 210px;
+    }
+
+    & div {
+      padding: 5px 10px;
+      background-color: rgb(124, 187, 212);
+      padding: 5px 10px;
+      border-radius: 7px;
+    }
+  
+    & span {
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+}
