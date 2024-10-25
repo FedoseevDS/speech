@@ -4,6 +4,8 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
+import sortImport from 'eslint-plugin-import';
+import sortKeys from 'eslint-plugin-sort-keys';
 
 export default tseslint.config(
   { ignores: ['dist', 'nodu_modules'] },
@@ -17,6 +19,8 @@ export default tseslint.config(
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      import: sortImport,
+      'sort-keys': sortKeys,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -34,8 +38,33 @@ export default tseslint.config(
       'new-cap': ['error', { newIsCap: true }],
       'no-var': 'error',
       'prefer-const': 'error',
-      'sort-keys': ['error', 'asc', { natural: true }],
+      'sort-keys': 0,
       '@typescript-eslint/no-explicit-any': ['off'],
+      'sort-keys/sort-keys-fix': 'error',
+      'import/order': [
+        1,
+        {
+          alphabetize: {
+            caseInsensitive: true,
+            order: 'asc',
+          },
+          pathGroupsExcludedImportTypes: ['react'],
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          'newlines-between': 'always',
+          pathGroups: [
+            {
+              group: 'external',
+              pattern: 'react',
+              position: 'before',
+            },
+            {
+              group: 'internal',
+              pattern: 'pages/**',
+              position: 'after',
+            },
+          ],
+        },
+      ],
     },
   },
 );
