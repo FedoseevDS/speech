@@ -19,8 +19,9 @@ export default defineConfig({
   resolve: {
     extensions: ['.scss', '.js', '.jsx', '.ts', '.tsx'],
     alias: {
+      assets: resolve(__dirname, './src/assets'),
       components: resolve(__dirname, './src/components'),
       pages: resolve(__dirname, './src/pages')
-    }
-  }
-})
+    },
+  },
+});

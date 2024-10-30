@@ -1,17 +1,14 @@
+import logo from 'assets/logo.png';
+
+import styles from './styles.module.scss';
+
 const Header = () => (
-  <div
-    style={{
-      border: '1px solid blue',
-      display: 'flex',
-      height: '150px',
-      justifyContent: 'space-between',
-    }}
-  >
-    <div style={{ border: '1px solid', width: '300px' }}>
-      <div>логотип</div>
+  <div className={styles.wrapper}>
+    <div className={styles.logo}>
+      <img src={logo} alt="логотип" />
     </div>
-    <div style={{ border: '1px solid', textAlign: 'center', width: '100%' }}>
-      <h1>Шапка сайта</h1>
+    <div className={styles.name}>
+      <h1>Ораторское искусство</h1>
     </div>
   </div>
 );
